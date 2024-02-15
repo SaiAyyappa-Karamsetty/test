@@ -2,13 +2,13 @@
 
 
 # Base ----------------------------------------
-uvicorn[standard]==0.15.0
 fastapi[all]
 python-multipart
 Pillow
 azure-storage-blob
 subprocess32
 jinja2
+uvicorn[standard]==0.15.0
 gunicorn
 ultralytics==8.0.3
 hydra-core>=1.2.0
