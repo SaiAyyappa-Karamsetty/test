@@ -1,6 +1,8 @@
 # Usage: pip install -r requirements.txt
-uvicorn[standard]==0.15.0
+
+
 # Base ----------------------------------------
+uvicorn[standard]==0.15.0
 fastapi[all]
 python-multipart
 Pillow
