@@ -6,7 +6,6 @@ fastapi[all]
 python-multipart
 Pillow
 azure-storage-blob
-subprocess32
 jinja2
 uvicorn[standard]==0.15.0
 gunicorn
