@@ -11,15 +11,7 @@ from azure.storage.blob import BlobServiceClient
 
 app = FastAPI()
 templates=Jinja2Templates(directory="templates")
-origins = ["*","redactapp.azurewebsites.net"] # Replace * with the allowed origins
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 my_connection_string='DefaultEndpointsProtocol=https;AccountName=aiworkspace4684782811;AccountKey=+IRiIf1QCRTNc9qDhJRQdoqmTH43tdMOXwSQxFXGKrzspKIa65JJwSo63wHa/mbfxF6t5+vbdZno+AStN6rTfw==;EndpointSuffix=core.windows.net'
 
 
@@ -65,11 +57,6 @@ async def upload_image(file: UploadFile = File(...)):
     # Return the output
     return Response(content=i, media_type='image/jpeg')
 
-def run():
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
 
-if __name__ == "__main__":
-    run()
 
  
